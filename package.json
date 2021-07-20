@@ -28,6 +28,7 @@
 		"express": "^4.17.1",
 		"extra-watch-webpack-plugin": "^1.0.3",
 		"got": "^9.6.0",
+		"https": "^1.0.0",
 		"jsonwebtoken": "^8.5.1",
 		"metascraper": "^5.22.11",
 		"metascraper-image": "^5.22.11",
