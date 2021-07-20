@@ -8,6 +8,7 @@ module.exports = {
 		devServer: {
 			disableHostCheck: true,
 			historyApiFallback: true,
+			public: process.env.VUE_APP_HOST + ":" + process.env.VUE_APP_PORT,
 		},
 		plugins: [
 			new extraWatch({
