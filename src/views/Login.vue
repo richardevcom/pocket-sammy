@@ -32,7 +32,7 @@
 		methods: {
 			async loginUser() {
 				try {
-					let response = await this.$http.post("/api/login", this.input)
+					let response = await this.$http.post("/login", this.input)
 					let token = response.data.token
 					localStorage.setItem("jwt", token)
 					if (token) {
@@ -46,7 +46,7 @@
 			},
 			async registerUser() {
 				try {
-					let response = await this.$http.post("/api/register", this.input)
+					let response = await this.$http.post("/register", this.input)
 					let token = response.data.token
 					if (token) {
 						localStorage.setItem("jwt", token)
