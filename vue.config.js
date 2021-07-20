@@ -6,6 +6,7 @@ module.exports = {
 	},
 	configureWebpack: {
 		devServer: {
+			disableHostCheck: true,
 			historyApiFallback: true,
 		},
 		plugins: [
