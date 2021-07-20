@@ -1,18 +1,21 @@
 module.exports = (app) => {
-    const urls = require('../controllers/url.controller.js')
+	const urls = require("../controllers/url.controller.js")
 
-    // Create a new Url
-    app.post('/urls', urls.create)
+	// Create a new Url
+	app.post("/urls", urls.create)
 
-    // Retrieve all Url
-    app.get('/urls', urls.findAll)
+	// Retrieve all Url
+	app.get("/urls", urls.findAll)
 
-    // Retrieve a single Url with urlId
-    app.get('/urls/:urlId', urls.findOne)
+	// Retrieve a single Url with urlId
+	app.get("/urls/user/:userId", urls.findByUserId)
 
-    // Update a Url with urlId
-    app.put('/urls/:urlId', urls.update)
+	// Retrieve a single Url with urlId
+	app.get("/urls/:urlId", urls.findOne)
 
-    // Delete a Url with urlId
-    app.delete('/urls/:urlId', urls.delete)
+	// Update a Url with urlId
+	app.put("/urls/:urlId", urls.update)
+
+	// Delete a Url with urlId
+	app.delete("/urls/:urlId", urls.delete)
 }

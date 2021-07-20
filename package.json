@@ -1,72 +1,96 @@
 {
-  "name": "pocket-sammy",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Pocket Sammy is bookmarking CRUD app for users to pocket their URLs for later us (inspired by Digital Ocean MongoDB Hackathon).",
-  "author": {
-    "name": "richardev",
-    "email": "hello@richardev.com",
-    "url": "https://www.richardev.com/"
-  },
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "dev": "nodemon ./server/run.js"
-  },
-  "main": "index.js",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "core-js": "^3.6.5",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "mongoose": "^5.13.3",
-    "vue": "^2.6.11"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "nodemon": "^2.0.12",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ],
-  "_id": "pocket-sammy@1.0.0",
-  "keywords": [
-    "pocket",
-    "sammy",
-    "express",
-    "mongodb",
-    "node",
-    "vue",
-    "js",
-    "bookmark",
-    "digital",
-    "ocean",
-    "crud",
-    "app"
-  ],
-  "license": "ISC",
-  "readme": "ERROR: No README data found!"
+	"name": "pocket-sammy",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Pocket Sammy is bookmarking CRUD app for users to pocket their URLs for later us (inspired by Digital Ocean MongoDB Hackathon).",
+	"author": {
+		"name": "richardev",
+		"email": "hello@richardev.com",
+		"url": "https://www.richardev.com/"
+	},
+	"scripts": {
+		"serve": "concurrently --kill-others \"nodemon ./server/run.js\" \"vue-cli-service serve\"",
+		"build": "vue-cli-service build",
+		"lint": "vue-cli-service lint",
+		"app": "vue-cli-service serve",
+		"server": "nodemon ./server/run.js"
+	},
+	"main": "index.js",
+	"dependencies": {
+		"@tailwindcss/postcss7-compat": "^2.0.2",
+		"axios": "^0.21.1",
+		"bcrypt": "^5.0.1",
+		"body-parser": "^1.19.0",
+		"core-js": "^3.6.5",
+		"cors": "^2.8.5",
+		"dotenv": "^10.0.0",
+		"express": "^4.17.1",
+		"extra-watch-webpack-plugin": "^1.0.3",
+		"got": "^9.6.0",
+		"jsonwebtoken": "^8.5.1",
+		"metascraper": "^5.22.11",
+		"metascraper-image": "^5.22.11",
+		"metascraper-title": "^5.22.11",
+		"metascraper-url": "^5.22.11",
+		"mongoose": "^5.13.3",
+		"morgan": "^1.10.0",
+		"vue": "^2.6.11",
+		"vue-inline-svg": "^2.0.0",
+		"vue-jwt-decode": "^0.1.0",
+		"vue-router": "^3.2.0"
+	},
+	"devDependencies": {
+		"@vue/cli-plugin-babel": "~4.5.0",
+		"@vue/cli-plugin-eslint": "~4.5.0",
+		"@vue/cli-plugin-router": "~4.5.0",
+		"@vue/cli-service": "~4.5.0",
+		"autoprefixer": "^9.8.6",
+		"babel-eslint": "^10.1.0",
+		"concurrently": "^6.2.0",
+		"eslint": "^6.7.2",
+		"eslint-plugin-vue": "^6.2.2",
+		"node-sass": "^5.0.0",
+		"nodemon": "^2.0.12",
+		"postcss": "^7.0.36",
+		"sass-loader": "^10.0.5",
+		"tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4",
+		"vue-cli-plugin-tailwind": "~2.0.6",
+		"vue-template-compiler": "^2.6.11"
+	},
+	"eslintConfig": {
+		"root": true,
+		"env": {
+			"node": true
+		},
+		"extends": [
+			"plugin:vue/essential",
+			"eslint:recommended"
+		],
+		"parserOptions": {
+			"parser": "babel-eslint"
+		},
+		"rules": {}
+	},
+	"browserslist": [
+		"> 1%",
+		"last 2 versions",
+		"not dead"
+	],
+	"_id": "pocket-sammy@1.0.0",
+	"keywords": [
+		"pocket",
+		"sammy",
+		"express",
+		"mongodb",
+		"node",
+		"vue",
+		"js",
+		"bookmark",
+		"digital",
+		"ocean",
+		"crud",
+		"app"
+	],
+	"license": "ISC",
+	"readme": "ERROR: No README data found!"
 }
