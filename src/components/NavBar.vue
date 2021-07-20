@@ -19,7 +19,7 @@
 						<a href="#" class="block px-4 py-1 p-2 lg:px-4" @click="logOut">Logout</a>
 					</li>
 					<li v-if="!loggedIn">
-						<router-link class="block px-4 py-1 p-2 lg:px-4" to="/register">Register</router-link>
+						<router-link class="block px-4 py-1 p-2 lg:px-4" to="/login">Register</router-link>
 					</li>
 					<li v-if="!loggedIn">
 						<router-link class="block px-4 py-1 p-2 lg:px-4" to="/login">Login</router-link>
