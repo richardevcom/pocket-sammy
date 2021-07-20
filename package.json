@@ -14,7 +14,8 @@
 		"build": "vue-cli-service build",
 		"lint": "vue-cli-service lint",
 		"app": "vue-cli-service serve",
-		"server": "nodemon ./server/run.js"
+		"server": "nodemon ./server/run.js",
+		"client": "nodemon ./client.js"
 	},
 	"main": "index.js",
 	"dependencies": {
