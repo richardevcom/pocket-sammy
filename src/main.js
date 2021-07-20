@@ -6,7 +6,7 @@ import "./css/app.scss"
 import { InlineSvgPlugin } from "vue-inline-svg"
 
 const base = axios.create({
-	baseURL: "http://" + process.env.VUE_APP_SRV_HOST + ":" + process.env.VUE_APP_SRV_PORT,
+	baseURL: process.env.VUE_APP_URL,
 })
 
 Vue.prototype.$http = base
