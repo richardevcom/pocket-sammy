@@ -47,7 +47,7 @@ if (dbUrl) {
 			require("./routes/user.routes")(app)
 
 			// Init server
-			app.listen(srvPort, function() {
+			app.listen(srvPort, srvHost, function() {
 				console.log(`[✔] Server started on http://${srvHost}:${srvPort}.\n`)
 			})
 		})
