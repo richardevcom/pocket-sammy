@@ -10,6 +10,7 @@
 	},
 	"scripts": {
 		"serve": "concurrently --kill-others \"nodemon ./server/run.js\" \"vue-cli-service serve\"",
+		"live": "concurrently --kill-others \"vue-cli-service build\" \"nodemon ./server/run.js\" \"nodemon ./client.js\"",
 		"build": "vue-cli-service build",
 		"lint": "vue-cli-service lint",
 		"app": "vue-cli-service serve",
