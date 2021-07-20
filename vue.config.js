@@ -5,6 +5,9 @@ module.exports = {
 		port: process.env.VUE_APP_PORT,
 	},
 	configureWebpack: {
+		devServer: {
+			historyApiFallback: true,
+		},
 		plugins: [
 			new extraWatch({
 				files: [".env"],
