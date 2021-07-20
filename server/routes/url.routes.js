@@ -2,20 +2,20 @@ module.exports = (app) => {
 	const urls = require("../controllers/url.controller.js")
 
 	// Create a new Url
-	app.post("/urls", urls.create)
+	app.post("/api/urls", urls.create)
 
 	// Retrieve all Url
-	app.get("/urls", urls.findAll)
+	app.get("/api/urls", urls.findAll)
 
 	// Retrieve a single Url with urlId
-	app.get("/urls/user/:userId", urls.findByUserId)
+	app.get("/api/urls/user/:userId", urls.findByUserId)
 
 	// Retrieve a single Url with urlId
-	app.get("/urls/:urlId", urls.findOne)
+	app.get("/api/urls/:urlId", urls.findOne)
 
 	// Update a Url with urlId
-	app.put("/urls/:urlId", urls.update)
+	app.put("/api/urls/:urlId", urls.update)
 
 	// Delete a Url with urlId
-	app.delete("/urls/:urlId", urls.delete)
+	app.delete("/api/urls/:urlId", urls.delete)
 }

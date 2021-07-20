@@ -1,13 +1,13 @@
 module.exports = (app) => {
-    const users = require('../controllers/user.controller.js')
-    const auth = require('../middleware/auth.middleware.js')
+	const users = require("../controllers/user.controller.js")
+	const auth = require("../middleware/auth.middleware.js")
 
-    // Create a new user
-    app.post('/register', users.register)
+	// Create a new user
+	app.post("/api/register", users.register)
 
-    // Authenticate user
-    app.post('/login', users.login)
+	// Authenticate user
+	app.post("/api/login", users.login)
 
-    // Show account details
-    app.get('/account', auth, users.account)
+	// Show account details
+	app.get("/api/account", auth, users.account)
 }

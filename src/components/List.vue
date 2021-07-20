@@ -30,7 +30,7 @@
 			}
 		},
 		mounted() {
-			this.getUrl("/urls")
+			this.getUrl("/api/urls")
 		},
 		methods: {
 			async getUrl(url) {

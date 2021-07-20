@@ -6,8 +6,8 @@ const mongoose = require("mongoose")
 const morgan = require("morgan")
 const app = express()
 // Let's preset some server & database config vars to defaults
-const srvHost = process.env.VUE_APP_SRV_HOST ? process.env.VUE_APP_SRV_HOST : "127.0.0.1"
-const srvPort = process.env.VUE_APP_SRV_PORT ? process.env.VUE_APP_SRV_PORT : 8080
+const srvHost = process.env.VUE_APP_SRV_HOST ? process.env.VUE_APP_SRV_HOST : "0.0.0.0"
+const srvPort = process.env.VUE_APP_SRV_PORT ? process.env.VUE_APP_SRV_PORT : 3000
 const dbUrl = process.env.DB_URL
 	? process.env.DB_URL
 	: `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}/${process.env.DB_NAME}?authSource=${process.env.DB_NAME}&replicaSet=${process.env.DB_REP}&tls=true&tlsCAFile=${process.env.DB_CERT}`
