@@ -3,11 +3,11 @@ module.exports = (app) => {
 	const auth = require("../middleware/auth.middleware.js")
 
 	// Create a new user
-	app.post("/api/register", users.register)
+	app.post("/register", users.register)
 
 	// Authenticate user
-	app.post("/api/login", users.login)
+	app.post("/login", users.login)
 
 	// Show account details
-	app.get("/api/account", auth, users.account)
+	app.get("/account", auth, users.account)
 }
