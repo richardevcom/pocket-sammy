@@ -91,10 +91,10 @@
 				}
 
 				this.$http
-					.post("/api/urls", data)
+					.post("/urls", data)
 					.then((response) => {
 						this.url.id = response.data.id
-						this.userUrls("/api/urls/user/" + this.user._id)
+						this.userUrls("/urls/user/" + this.user._id)
 						this.submitted = true
 					})
 					.catch((e) => {
@@ -111,10 +111,10 @@
 				}
 
 				this.$http
-					.put("/api/urls/" + this.editId, data)
+					.put("/urls/" + this.editId, data)
 					.then((response) => {
 						this.url.id = response.data.id
-						this.userUrls("/api/urls/user/" + this.user._id)
+						this.userUrls("/urls/user/" + this.user._id)
 						this.submitted = true
 						this.isEditing = false
 					})
@@ -155,8 +155,8 @@
 
 			async removeUrl(id) {
 				try {
-					await this.$http.delete("/api/urls/" + id)
-					this.userUrls("/api/urls/user/" + this.user._id)
+					await this.$http.delete("/urls/" + id)
+					this.userUrls("/urls/user/" + this.user._id)
 				} catch (err) {
 					console.log("Error", "Something Went Wrong while fetching API URL", "error")
 					console.log(err)
@@ -167,7 +167,7 @@
 			this.getUserDetails()
 		},
 		mounted() {
-			this.userUrls("/api/urls/user/" + this.user._id)
+			this.userUrls("/urls/user/" + this.user._id)
 		},
 	}
 </script>

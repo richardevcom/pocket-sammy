@@ -41,7 +41,7 @@ if (dbUrl) {
 				next()
 			})
 			// Return motd on abspath GET request
-			app.get("/api", (req, res) => {
+			app.get("/", (req, res) => {
 				res.json({
 					status: "ok",
 					message: "Welcome to Pocket Sammy - what's your URL for today, sir?",
