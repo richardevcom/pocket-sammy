@@ -27,5 +27,5 @@ app.use(
 app.use(staticFileMiddleware)
 
 app.listen(appPort, appHost, function() {
-	console.log("Example app listening on port %s!", appPort)
+	console.log("🦈 Sammy was last seen on port %s!", appPort)
 })

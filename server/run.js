@@ -54,7 +54,7 @@ if (dbUrl) {
 
 			// Init server
 			app.listen(srvPort, srvHost, function() {
-				console.log(`[✔] Server started on http://${srvHost}:${srvPort}.\n`)
+				console.log(`[✔] There is no place like http://${srvHost}:${srvPort}.\n`)
 			})
 		})
 		.catch((err) => {
